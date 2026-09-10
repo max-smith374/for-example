@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Green Valley Academy</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #fef8e7 0%, #dff3ec 50%, #eaf4fb 100%);
+    min-height: 100vh;
+  }
+
+  .top-bar {
+    background: #1b6ca8;
+  }
+
+  .top-bar a { color: white; text-decoration: none; }
+
+  .page-hero {
+    padding: 60px 0 20px;
+    text-align: center;
+    color: #1b6ca8;
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar py-3">
+  <div class="container">
+    <a href="index.html">&larr; Back to Green Valley Academy</a>
+  </div>
+</div>
+
+<div class="page-hero">
+  <h1 class="fw-bold">Get In Touch</h1>
+  <p class="lead text-muted">Have a question? Reach out and our team will get back to you shortly.</p>
+</div>
+
+<div class="container py-4">
+  <div class="row align-items-start g-5 justify-content-center">
+    <div class="col-md-5">
+      <div class="card shadow-sm p-4 border-0">
+        <div class="mb-3">
+          <strong>📍 Address</strong>
+          <p class="text-muted mb-0">Green Valley Road, Kampala, Uganda</p>
+        </div>
+        <div class="mb-3">
+          <strong>📧 Email</strong>
+          <p class="text-muted mb-0">info@greenvalleyacademy.com</p>
+        </div>
+        <div class="mb-3">
+          <strong>📞 Phone</strong>
+          <p class="text-muted mb-0">+256 700 000 000</p>
+        </div>
+        <div>
+          <strong>🕒 Office Hours</strong>
+          <p class="text-muted mb-0">Mon – Fri, 8:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow-sm p-4 border-0">
+        <h3 class="fw-bold mb-4" style="color:#1b6ca8;">Contact Form</h3>
+        <form id="contactForm">
+          <div class="mb-3">
+            <label for="contactName" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="contactName" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="contactEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="contactSubject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="contactSubject" placeholder="What is this about?">
+          </div>
+          <div class="mb-3">
+            <label for="contactMessage" class="form-label">Message</label>
+            <textarea class="form-control" id="contactMessage" rows="4" placeholder="Write your message"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 py-2" id="sendBtn">
+            <span class="spinner-border spinner-border-sm d-none" id="sendSpinner" role="status" aria-hidden="true"></span>
+            <span id="sendLabel">Send Message</span>
+          </button>
+
+          <div class="alert alert-success mt-3 d-none" id="sentMsg">
+            Message sent! We'll reply as soon as we can.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const sendBtn = document.getElementById('sendBtn');
+  const spinner = document.getElementById('sendSpinner');
+  const label = document.getElementById('sendLabel');
+  const sentMsg = document.getElementById('sentMsg');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    spinner.classList.remove('d-none');
+    label.textContent = 'Sending...';
+    sendBtn.disabled = true;
+
+    setTimeout(function () {
+      spinner.classList.add('d-none');
+      label.textContent = 'Send Message';
+      sendBtn.disabled = false;
+      sentMsg.classList.remove('d-none');
+      form.reset();
+    }, 1500);
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

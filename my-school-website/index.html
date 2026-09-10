@@ -11,11 +11,13 @@
   .hero-section {
     background:
       linear-gradient(135deg, rgba(13,59,102,0.75) 0%, rgba(27,108,168,0.6) 60%, rgba(42,157,143,0.55) 100%),
-      url('images/pexels-andromeda99-18122076.jpg');
+      url('/images/pexels-andromeda99-18122076.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 100px 0 90px;
+    min-height: 720px;
+    display: flex;
+    align-items: center;
   }
 
   .badge-open {
@@ -52,6 +54,7 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold text-success" href="#">Green Valley Academy</a>
@@ -70,11 +73,14 @@
             <li><a class="dropdown-item" href="#">Gallery</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="admission.html">Apply</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+<!-- HERO -->
 <section class="hero-section text-center">
   <div class="container">
     <span class="badge badge-open rounded-pill px-3 py-2 mb-3">Admissions Open</span>
@@ -84,12 +90,13 @@
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="py-5">
   <div class="container">
     <div class="row align-items-center g-4">
       <div class="col-md-5">
         <div class="bg-light rounded shadow-sm p-4 text-center">
-          <div style="background-image:url('images/pexels-krishna-kids-photography-2148372889-38407547.jpg'); background-size: cover; background-position: center; width: 100%; height: 200px;"></div>
+          <div style="background-image:url('/images/pexels-krishna-kids-photography-2148372889-38407547.jpg'); background-size: cover; background-position: center; width: 100%; height: 200px;"></div>
           <p class="text-muted mb-0">books, apples, and building blocks —<br>the little things that make a classroom</p>
         </div>
       </div>
@@ -109,6 +116,7 @@
   </div>
 </section>
 
+<!-- PROGRAMS -->
 <section id="programs" class="py-5 bg-light">
   <div class="container text-center">
     <h2 class="section-title">Our Learning Programs</h2>
@@ -118,7 +126,7 @@
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <div class="card-body text-start">
-            <div style="background-image: url('images/pexels-yankrukov-8613118.jpg'); background-size: cover; background-position: center; width: 100%; height: 200px;"></div>
+            <div style="background-image: url('/images/pexels-yankrukov-8613118.jpg'); background-size: cover; background-position: center; width: 100%; height: 200px;"></div>
             <h5 class="card-title text-success mt-2">Nursery Section</h5>
             <p class="card-text text-muted">A friendly environment where young children learn through play, stories, songs and guided activies.</p>
             <a href="#" class="btn btn-sm btn-outline-success">View Details</a>
@@ -129,7 +137,7 @@
         <div class="card h-100 shadow-sm position-relative">
           <span class="badge bg-danger card-icon-badge">New</span>
           <div class="card-body text-start">
-            <div style="background-image: url('images/pexels-kimmi-jun-201206578-18506736.jpg'); background-size: cover; background-position: center; width: 100%; height: 200px;"></div>
+            <div style="background-image: url('/images/pexels-kimmi-jun-201206578-18506736.jpg'); background-size: cover; background-position: center; width: 100%; height: 200px;"></div>
             <h5 class="card-title text-success mt-2">Primary Section</h5>
             <p class="card-text text-muted">Strong academic foundation in English, Mathematics, Science, Social Studies and practical skills.</p>
             <a href="#" class="btn btn-sm btn-outline-success">Learn More</a>
@@ -140,7 +148,7 @@
         <div class="card h-100 shadow-sm">
           <div class="card-body text-start">
             <video width="100%" height="200" autoplay muted loop playsinline style="object-fit: cover; border-radius: 8px;">
-  <source src="5892367-uhd_3840_2160_30fps.mp4" type="video/mp4">
+  <source src="/images/5892367-uhd_3840_2160_30fps.mp4" type="video/mp4">
 </video>
             <h5 class="card-title text-success mt-2">Computer Lessons</h5>
             <p class="card-text text-muted">Students learn basic computer use, typing, internet safety and beginner coding.</p>
@@ -151,6 +159,8 @@
     </div>
   </div>
 </section>
+
+<!-- STATS -->
 <section class="py-4">
   <div class="container">
     <div class="row g-3">
@@ -182,6 +192,7 @@
   </div>
 </section>
 
+<!-- ADMISSION UPDATES -->
 <section class="py-5">
   <div class="container">
     <div class="card shadow-sm p-4">
@@ -193,121 +204,12 @@
       <div class="progress mb-3" role="progressbar" aria-label="Primary seats filled" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
         <div class="progress-bar bg-info" style="width: 35%">Primary 35%</div>
       </div>
-      <a href="#" class="btn btn-success">Apply for Admission</a>
+      <a href="admission.html" class="btn btn-success">Apply for Admission</a>
     </div>
   </div>
 </section>
 
-<section id="apply" class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-md-6">
-        <h1 class="fw-bold" style="color:#1b6ca8;">Admissions Are Open</h1>
-        <p class="lead text-muted">Apply now and give your child a strong academic foundation.</p>
-        <div class="card shadow-sm p-4 border-0">
-          <h5 style="color:#1b6ca8;">Why Choose Us?</h5>
-          <ul class="text-muted mb-0">
-            <li>Qualified teachers</li>
-            <li>Computer lessons</li>
-            <li>Safe learning environment</li>
-            <li>Sports and clubs</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card shadow-sm p-4 border-0">
-          <h3 class="fw-bold mb-4" style="color:#1b6ca8;">Admission Form</h3>
-          <form>
-            <div class="mb-3">
-              <label for="studentName" class="form-label">Student Name</label>
-              <input type="text" class="form-control" id="studentName" placeholder="Enter student name">
-            </div>
-            <div class="mb-3">
-              <label for="parentName" class="form-label">Parent Name</label>
-              <input type="text" class="form-control" id="parentName" placeholder="Enter parent name">
-            </div>
-            <div class="mb-3">
-              <label for="phoneNumber" class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter phone number">
-            </div>
-            <div class="mb-3">
-              <label for="classSelect" class="form-label">Class Applying For</label>
-              <select class="form-select" id="classSelect">
-                <option selected disabled>Select class</option>
-                <option>Nursery</option>
-                <option>Primary 1</option>
-                <option>Primary 2</option>
-                <option>Primary 3</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Write message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100 py-2">Submit Application</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="py-5">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-md-6">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="text-muted mb-4">Have a question? Reach out and our team will get back to you shortly.</p>
-
-        <div class="card shadow-sm p-4 border-0">
-          <div class="mb-3">
-            <strong>📍 Address</strong>
-            <p class="text-muted mb-0">Green Valley Road, Kampala, Uganda</p>
-          </div>
-          <div class="mb-3">
-            <strong>📧 Email</strong>
-            <p class="text-muted mb-0">info@greenvalleyacademy.com</p>
-          </div>
-          <div class="mb-3">
-            <strong>📞 Phone</strong>
-            <p class="text-muted mb-0">+256 700 000 000</p>
-          </div>
-          <div>
-            <strong>🕒 Office Hours</strong>
-            <p class="text-muted mb-0">Mon – Fri, 8:00 AM – 5:00 PM</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card shadow-sm p-4 border-0">
-          <h3 class="fw-bold mb-4" style="color:#1b6ca8;">Contact Form</h3>
-          <form>
-            <div class="mb-3">
-              <label for="contactName" class="form-label">Your Name</label>
-              <input type="text" class="form-control" id="contactName" placeholder="Enter your name">
-            </div>
-            <div class="mb-3">
-              <label for="contactEmail" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email">
-            </div>
-            <div class="mb-3">
-              <label for="contactSubject" class="form-label">Subject</label>
-              <input type="text" class="form-control" id="contactSubject" placeholder="What is this about?">
-            </div>
-            <div class="mb-3">
-              <label for="contactMessage" class="form-label">Message</label>
-              <textarea class="form-control" id="contactMessage" rows="4" placeholder="Write your message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100 py-2">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer class="text-center py-4">
   <div class="container">
     <h5 class="text-white">Green Valley Academy</h5>
